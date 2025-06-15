@@ -2,42 +2,6 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>AJ Photo Editor - Photo Upload</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 40px;
-      text-align: center;
-      background-color: #f7f7f7;
-    }
-    header {
-      font-size: 2em;
-      color: #2c3e50;
-      margin-bottom: 30px;
-    }
-    input[type="file"] {
-      font-size: 1.1em;
-      margin-top: 20px;
-    }
-    img {
-      margin-top: 30px;
-      max-width: 90%;
-      border-radius: 10px;
-      box-shadow: 0 0 15px rgba(0,0,0,0.2);
-    }
-  </style>
-</head>
-<body>
-
-<header>AJ Photo Editor</header>
-
-<input type="file" id="upload" accept="image/*" />
-<br />
-<img id="preview" alt="Upload your photo to see here" />
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Apna Sapna Apna Ghar</title>
   <style>
@@ -81,24 +45,5 @@
   <h1>Welcome to Apna Sapna Apna Ghar</h1>
   <img src="https://raw.githubusercontent.com/Amitantil-111/apnasapnaapnaghar/main/welcome-image.png" alt="Apna Sapna Apna Ghar" />
   <button>Explore More</button>
-</body>
-</html>
-
-<script>
-  const uploadInput = document.getElementById('upload');
-  const previewImg = document.getElementById('preview');
-
-  uploadInput.addEventListener('change', function(event) {
-    const file = event.target.files[0];
-    if(file) {
-      const reader = new FileReader();
-      reader.onload = function(e) {
-        previewImg.src = e.target.result;
-      }
-      reader.readAsDataURL(file);
-    }
-  });
-</script>
-
 </body>
 </html>
